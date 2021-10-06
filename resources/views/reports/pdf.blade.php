@@ -27,16 +27,16 @@
 </head>
 <body style="background-color: white">
     <div class="container" id="jadi">
-        <div class="row mt-5">
-            <div class="col-md-2">
-                <form action="/unduh-rapor/file" id="make_pdf" method="POST">
+        
+                {{-- <form action="/unduh-rapor/file" id="make_pdf" method="POST">
+                    @csrf
                     @foreach ($datasiswa as $item)
-                        <input type="hidden" name="namasiswa" value="{{$item['nama']}}">
+                        <input type="hidden" name="namasiswa" value="{{$item['nama']}}"> --}}
                         {{-- <input type="hidden" name="hidden_html" id="hidden_html" value="{{$item['hidden_html']}}"> --}}
-                    @endforeach
+                    {{-- @endforeach
                     <button type="submit" name="create_pdf" id="create_pdf" class="btn btn-success"><i class="bi bi-file-earmark-arrow-down"></i> Download File</button>
-                </form>
-
+                </form> --}}
+{{-- 
                 <script type="text/javascript">
                     $(document).ready(function(){
                         $('#create_pdf').click(function(){
@@ -44,10 +44,7 @@
                             $('#make_pdf').submit();
                         });
                     });
-                </script>
-
-            </div>
-        </div>
+                </script> --}}
     <div class="row mt-5 mx-auto">
         <div class="col-lg-12">
                     <div class="invoice-title">
@@ -241,7 +238,6 @@
                                 </div>
                             </div>
                         </div>
-    
                         
                     </div>
                 </div>
@@ -300,14 +296,14 @@
             // var img1 = myChart.toBase64Image();
             // document.getElementById('contoh').src(img1);
             // console.log(img1);
-            var chartjsToImage = require("chartjs-to-image")
-            const myChart15 = new ChartJsImage();
-                myChart15.setConfig({
-                type: 'bar',
-                data: { labels: ['Hello world', 'Foo bar'], datasets: [{ label: 'Foo', data: [1, 2] }] },
-                });
-            const dataUrl = await myChart.toDataUrl();
-            console.log(myChart15.getUrl());
+            // var chartjsToImage = require("chartjs-to-image")
+            // const myChart15 = new ChartJsImage();
+            //     myChart15.setConfig({
+            //     type: 'bar',
+            //     data: { labels: ['Hello world', 'Foo bar'], datasets: [{ label: 'Foo', data: [1, 2] }] },
+            //     });
+            // const dataUrl = await myChart.toDataUrl();
+            // console.log(myChart15.getUrl());
     
             var ctx2 = document.getElementById("Chart2").getContext("2d");
             var myChart2 = new Chart(ctx2, {
@@ -1119,75 +1115,11 @@
                 }
             });
             // End of Grafik Nilai Total
-    </script>
-    
-    {{-- <script type="text/javascript">
-    // Load chart and the corechart package
-    google.charts.load("current", { packages: ["corechart"] });
-    
-    // Draw the line chart
-    google.charts.setOnLoadCallback(drawMenyempurnakaWudhuChart);
-    google.charts.setOnLoadCallback(drawSholatWajibChart);
-    
-    // Callback that draws the line chart for Menyempurnakan Wudhu
-    function drawMenyempurnakaWudhuChart() {
-        // Create data table
-        var data = new google.visualization.DataTable();
-        data.addColumn("string", "Topping");
-        data.addColumn("number", "Slices");
-        data.addRows([
-            ["Mushrooms", 1],
-            ["Onions", 1],
-            ["Olives", 2],
-            ["Zucchini", 2],
-            ["Pepperoni", 1],
-        ]);
-    
-        // Set options for Sarah's pie chart.
-        var options = {
-            title: "How Much Pizza Sarah Ate Last Night",
-            width: 400,
-            height: 300,
-        };
-    
-        // Instantiate and draw the chart for Sarah's pizza.
-        var chart = new google.visualization.PieChart(
-            document.getElementById("Sarah_chart_div")
-        );
-        chart.draw(data, options);
-    }
-    
-    // Callback that draws the pie chart for Anthony's pizza.
-    function drawSholatWajibChart() {
-    
-        // Create the data table for Anthony's pizza.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Mushrooms', 2],
-          ['Onions', 2],
-          ['Olives', 2],
-          ['Zucchini', 0],
-          ['Pepperoni', 3]
-        ]);
-    
-        // Set options for Anthony's pie chart.
-        var options = {title:'How Much Pizza Anthony Ate Last Night',
-                       width:400,
-                       height:300};
-    
-        // Instantiate and draw the chart for Anthony's pizza.
-        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div'));
-        chart.draw(data, options);
-      }
-    
-      $(window).resize(function(){
-        drawSholatWajibChart();
-        drawMenyempurnakaWudhuChart();
-    });
-    
-    </script> --}}
+
+            </script>
+            <script>
+                window.addEventListener("load", window.print());
+            </script>
 
     <!-- JAVASCRIPT -->
 	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>

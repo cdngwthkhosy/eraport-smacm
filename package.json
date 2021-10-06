@@ -16,6 +16,7 @@
         "postcss": "^8.1.14"
     },
     "dependencies": {
-        "chartjs-to-image": "^1.0.4"
+        "chartjs-to-image": "^1.0.4",
+        "dom-to-image": "^2.6.0"
     }
 }

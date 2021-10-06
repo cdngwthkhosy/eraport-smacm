@@ -29,7 +29,7 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware('auth','cekrole:admin,guru');
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth','cekrole:admin,guru,siswa');
@@ -39,7 +39,7 @@ Route::post('/fillform', [FillformController::class, 'store']);
 
 Route::get('/unduh-rapor', [UnduhraporController::class, 'index'])->name('unduhrapor')->middleware('auth','cekrole:admin,guru');
 Route::post('/unduh-rapor', [UnduhraporController::class, 'unduh'])->middleware('auth','cekrole:admin,guru');
-// Route::post('/unduh-rapor   ', [UnduhraporController::class, 'unduhFile']);
+Route::post('/unduh-rapor/file', [UnduhraporController::class, 'unduhFile']);
 
 
 Route::get('/mutabaah', [MutabaahController::class, 'index'])->name('mutabaah')->middleware('auth','cekrole:admin,siswa');

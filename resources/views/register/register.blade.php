@@ -23,7 +23,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="text-center">
-						<a href="/" class="mb-5 d-block auth-logo"> <img src="/assets/images/logo-cendekia.png" alt="" height="22" class="logo"> </a>
+						<a href="/" class="mb-5 d-block auth-logo"> <img src="/assets/images/CM WHITE.png" alt="" height="50" class="logo"> </a>
 					</div>
 				</div>
 			</div>

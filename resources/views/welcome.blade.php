@@ -33,7 +33,6 @@
                         </form>
                     @else
                         <a href="/login" class="text-sm text-gray-700 underline">Log in</a>
-                        <a href="/register" class="ml-4 text-sm text-gray-700 underline">Register</a>
                     @endauth
                 </div>
 

@@ -88,6 +88,9 @@
 							<li>
 								<a href="{{ route('unduhrapor') }}"> <i class="bi bi-download"></i> <span>Unduh Laporan</span> </a>
 							</li>
+							<li>
+								<a href="{{ route('register') }}"> <i class="bi bi-person-plus-fill"></i> <span>Registrasi Siswa</span> </a>
+							</li>
 						@endif
 						{{-- end of Halaman Guru --}}
 
