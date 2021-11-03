@@ -154,7 +154,7 @@
 						</div>
 					</div>
 					<div class="mt-5 text-center">
-						<p>©
+						<p class="text-white">©
 							<script>
 							document.write(new Date().getFullYear())
 							</script> e-Raport. Crafted with <i class="mdi mdi-heart text-danger"></i> by Divisi Pengabdi</p>
