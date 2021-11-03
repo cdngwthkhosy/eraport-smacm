@@ -26,12 +26,11 @@ class UnduhraporController extends Controller
     {
         $data = $request->all();
         $siswa = $data['namasiswa'];
-        
-
-        $rapor = Murabbi::get()->where('nama', $siswa);
-        $mutabaah = Mutabaah::get()->where('nama', $siswa);
+        $startDate = $data['start'];
+        $endDate = $data['end'];
+        $rapor = Murabbi::where('nama','=', $siswa)->get();
+        $mutabaah = Mutabaah::get()->where('nama', $siswa)->whereBetween('tanggal', [$startDate, $endDate]);
         // $nilaiwudhu = DB::table('mutabaah_tables')->sum('')
-
         $datasiswa = array();  
         $datamutabaah = array();
         $nilaitotal = array();

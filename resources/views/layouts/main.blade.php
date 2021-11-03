@@ -16,6 +16,8 @@
 	<!-- App Css-->
 	<link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	
+	<link rel="stylesheet" href="/assets/libs/@chenfengyuan/datepicker/datepicker.min.css">
 	@yield('head')
 </head>
 

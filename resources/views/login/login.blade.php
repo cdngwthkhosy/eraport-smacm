@@ -103,7 +103,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="text-center">
-						<a href="/" class="mb-5 d-block auth-logo"> <img src="/assets/images/CM WHITE.png" alt="" width="50" class="logo"> </a>
+						<a href="/" class="mb-5 d-block auth-logo"> <img src="/assets/images/CM WHITE.png" alt="" width="150" class="logo"> </a>
 					</div>
 				</div>
 			</div>
@@ -148,10 +148,6 @@
 										<input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="userpassword" placeholder="Enter password"> </div>
 									<div class="mt-3 text-end">
 										<button class="btn btn-primary w-sm waves-effect waves-light" type="submit">Log In</button>
-									</div>
-								</form>
-									<div class="mt-4 text-center">
-										<p class="mb-0">Don't have an account ? <a href="/register" class="fw-medium text-primary"> Register now </a> </p>
 									</div>
 								</form>
 							</div>
