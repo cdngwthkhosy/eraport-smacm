@@ -33,6 +33,7 @@
                         </form>
                     @else
                         <a href="/login" class="text-sm text-gray-700 underline">Log in</a>
+                        <a href={{route('register')}} class="text-sm text-gray-700 underline">Register</a>
                     @endauth
                 </div>
 

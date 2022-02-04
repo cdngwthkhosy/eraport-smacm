@@ -20,7 +20,7 @@ use App\Http\Controllers\UnduhraporController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login.login');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');

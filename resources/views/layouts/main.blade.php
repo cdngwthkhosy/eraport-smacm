@@ -7,14 +7,14 @@
 	<title>Dashboard Guru</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- App favicon -->
-	<link rel="shortcut icon" href="/assets/images/favicon-cendekia.jpg">
+	<link rel="shortcut icon" href=" {{ asset('assets/images/favicon-cendekia.jpg') }} ">
 	<!-- Bootstrap Css -->
-	<link href="/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+	<link href=" {{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
 	<!-- Icons Css -->
-	<link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+	<link href=" {{ asset('assets/css/icons.min.css') }} " rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<!-- App Css-->
-	<link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+	<link href=" {{ asset('assets/css/app.min.css') }} " id="app-style" rel="stylesheet" type="text/css" />
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	
 	<link rel="stylesheet" href="/assets/libs/@chenfengyuan/datepicker/datepicker.min.css">
@@ -148,15 +148,15 @@
 	<!-- JAVASCRIPT -->
 	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-	<script src="/assets/libs/jquery/jquery.min.js"></script>
-	<script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/libs/metismenu/metisMenu.min.js"></script>
-	<script src="/assets/libs/simplebar/simplebar.min.js"></script>
-	<script src="/assets/libs/node-waves/waves.min.js"></script>
-	<script src="/assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-	<script src="/assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
+	<script src=" {{ asset('assets/libs/jquery/jquery.min.js') }} "></script>
+	<script src=" {{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
+	<script src=" {{ asset('assets/libs/metismenu/metisMenu.min.js') }} "></script>
+	<script src=" {{ asset('assets/libs/simplebar/simplebar.min.js') }} "></script>
+	<script src=" {{ asset('assets/libs/node-waves/waves.min.js') }} "></script>
+	<script src=" {{ asset('assets/libs/waypoints/lib/jquery.waypoints.min.js') }} "></script>
+	<script src=" {{ asset('assets/libs/jquery.counterup/jquery.counterup.min.js') }} "></script>
 	<!-- App js -->
-	<script src="/assets/js/app.js"></script>
+	<script src=" {{ asset('/assets/js/app.js') }} "></script>
 
 </body>
 
