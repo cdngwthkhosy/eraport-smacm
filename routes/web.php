@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DataMutabaahSiswaController;
 use App\Http\Controllers\FillformController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -41,6 +42,8 @@ Route::get('/unduh-rapor', [UnduhraporController::class, 'index'])->name('unduhr
 Route::post('/unduh-rapor', [UnduhraporController::class, 'unduh'])->middleware('auth','cekrole:admin,guru');
 Route::post('/unduh-rapor/file', [UnduhraporController::class, 'unduhFile']);
 
+Route::get('/datamutabaahsiswa', [DataMutabaahSiswaController::class, 'index'])->name('datamutabaahsiswa')->middleware('auth','cekrole:admin,guru');
+Route::post('/datamutabaahsiswa', [DataMutabaahSiswaController::class, 'show_data'])->middleware('auth', 'cekrole:admin,guru');
 
 Route::get('/mutabaah', [MutabaahController::class, 'index'])->name('mutabaah')->middleware('auth','cekrole:admin,siswa');
 Route::post('/mutabaah', [MutabaahController::class, 'store']);

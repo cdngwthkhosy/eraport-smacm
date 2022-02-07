@@ -93,6 +93,9 @@
 							<li>
 								<a href="{{ route('register') }}"> <i class="bi bi-person-plus-fill"></i> <span>Registrasi Siswa</span> </a>
 							</li>
+							<li>
+								<a href="{{ route('datamutabaahsiswa') }}"> <i class="bi bi-file-bar-graph-fill"></i> <span>Detail Nilai Siswa</span> </a>
+							</li>
 						@endif
 						{{-- end of Halaman Guru --}}
 
