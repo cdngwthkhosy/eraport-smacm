@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MutabaahController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\UnduhraporController;
 
 /*
@@ -47,5 +48,9 @@ Route::post('/datamutabaahsiswa', [DataMutabaahSiswaController::class, 'show_dat
 
 Route::get('/mutabaah', [MutabaahController::class, 'index'])->name('mutabaah')->middleware('auth','cekrole:admin,siswa');
 Route::post('/mutabaah', [MutabaahController::class, 'store']);
+
+Route::get('/dashboard/daftar-siswa', [SiswaController::class, 'index'])->name('daftar-siswa')->middleware('auth', 'cekrole:admin,guru');
+Route::get('/dashboard/daftar-siswa/edit/{id}', [SiswaController::class, 'edit'])->name('daftar-siswa.edit')->middleware('auth', 'cekrole:admin,guru');
+Route::post('/dashboard/daftar-siswa/edit/update', [SiswaController::class, 'update'])->name('daftar-siswa.update')->middleware('auth', 'cekrole:admin,guru');
 
 

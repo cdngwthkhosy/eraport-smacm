@@ -79,6 +79,6 @@ class DataMutabaahSiswaController extends Controller
             ];
         }
 
-        return view('data.show-data', compact('datasiswa', 'datamutabaah'));
+        return view('data.show-data', compact('datasiswa', 'datamutabaah', 'siswa'));
     }
 }
