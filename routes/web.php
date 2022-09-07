@@ -53,4 +53,6 @@ Route::get('/dashboard/daftar-siswa', [SiswaController::class, 'index'])->name('
 Route::get('/dashboard/daftar-siswa/edit/{id}', [SiswaController::class, 'edit'])->name('daftar-siswa.edit')->middleware('auth', 'cekrole:admin,guru');
 Route::post('/dashboard/daftar-siswa/edit/update', [SiswaController::class, 'update'])->name('daftar-siswa.update')->middleware('auth', 'cekrole:admin,guru');
 
+Route::get('/dashboard/daftar-siswa/delete/{id}', [SiswaController::class, 'delete'])->name('daftar-siswa.delete')->middleware('auth', 'cekrole:admin,guru');
+
 
