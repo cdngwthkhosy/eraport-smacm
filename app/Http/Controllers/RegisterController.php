@@ -25,10 +25,12 @@ class RegisterController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        User::create($validatedData);
+        $user = User::create($validatedData);
 
-        $request->session()->flash('berhasil', 'Registrasi Berhasil, Silahkan Login');
-
-        return redirect('/login');
+        if ($user) {
+            return redirect(route('dashboard'))->with('register_succed', 'User berhasil teregistrasi, silahkan login untuk aktivasi');
+        } else {
+            return redirect(route('dashboard'))->with('register_failed', 'User gagal teregistrasi, silahkan hubungi tim IT');
+        }
     }
 }

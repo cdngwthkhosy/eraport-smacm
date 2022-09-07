@@ -21,18 +21,19 @@ use App\Http\Controllers\UnduhraporController;
 |
 */
 
-Route::get('/', function () {
-    return view('login.login');
-});
+
+Route::redirect('/', 'login');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::middleware('auth', 'cekrole:admin,guru')->prefix('dashboard')->group(function (){
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+    Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+});
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware('auth','cekrole:admin,guru');
-Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth','cekrole:admin,guru,siswa');
 
